@@ -23,6 +23,14 @@ import Building10 from './source/screen/building10';
 import Building11 from './source/screen/building11';
 import Building03 from './source/screen/building03';
 import Building061 from './source/screen/building061';
+import Building35 from './source/screen/building35';
+import Building41 from './source/screen/building41';
+import Building19 from './source/screen/building19';
+import Building50 from './source/screen/building50';
+import Building26 from './source/screen/building26';
+import Building07 from './source/screen/building07';
+import Building15 from './source/screen/building15';
+import Building38 from './source/screen/building38';
 import Building01 from './source/screen/building01';
 
 import TestScreen from './source/screen/test'; // Test screen
@@ -182,7 +190,63 @@ const App = () => {
                 headerTitle: () => <HeaderTitle text="인돈기념관" />,
               }}
             />
+               <Stack.Screen
+              name="building35"
+              component={Building35}
+              options={{
+                headerTitle: () => <HeaderTitle text="선교사촌" />,
+              }}
+            />
+               <Stack.Screen
+              name="building41"
+              component={Building41}
+              options={{
+                headerTitle: () => <HeaderTitle text="소망관" />,
+              }}
+            />
+               <Stack.Screen
+              name="building19"
+              component={Building19}
+              options={{
+                headerTitle: () => <HeaderTitle text="구관기숙사" />,
+              }}
+            />
+               <Stack.Screen
+              name="building50"
+              component={Building50}
+              options={{
+                headerTitle: () => <HeaderTitle text="린튼글로벌" />,
+              }}
+            />
+               <Stack.Screen
+              name="building26"
+              component={Building26}
+              options={{
+                headerTitle: () => <HeaderTitle text="정성균선교관" />,
+              }}
+            />
+               <Stack.Screen
+              name="building07"
+              component={Building07}
+              options={{
+                headerTitle: () => <HeaderTitle text="조형예술관" />,
+              }}
+            />
+               <Stack.Screen
+              name="building15"
+              component={Building15}
+              options={{
+                headerTitle: () => <HeaderTitle text="운동장" />,
+              }}
+            />
             
+            <Stack.Screen
+              name="building38"
+              component={Building38}
+              options={{
+                headerTitle: () => <HeaderTitle text="실내체육관" />,
+              }}
+            />
             <Stack.Screen
               name="TestScreen"
               component={TestScreen}

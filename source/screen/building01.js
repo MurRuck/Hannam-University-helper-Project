@@ -33,16 +33,6 @@ const Building01 = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="1FScreen"
-          component={FirstFloorScreen}
-          options={{title: '1층'}}
-        />
-        <Stack.Screen
-          name="2FScreen"
-          component={SecondFloorScreen}
-          options={{title: '2층'}}
-        />
-        <Stack.Screen
           name="Gil"
           component={GilScreen}
           options={{ title: '길 안내' }}
@@ -69,6 +59,7 @@ const Building01Main = ({navigation}) => {
               details="본관-2"
               navigation={navigation} 
             />
+            
           </ScrollView>
           <Bottombar01 />
         </GestureHandlerRootView>

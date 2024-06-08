@@ -13,7 +13,7 @@ import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {createStackNavigator} from '@react-navigation/stack';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
-import Bottombar08 from '../component/bottomBar08'; // 하단 버튼 바
+import Bottombar26 from '../component/bottomBar26'; // 하단 버튼 바
 
 import FirstFloorScreen from './09Floors/1F';
 import SecondFloorScreen from './09Floors/2F';
@@ -24,12 +24,12 @@ const windowHeight = Dimensions.get('window').height;
 
 const Stack = createStackNavigator();
 
-const Building08 = () => {
+const Building26 = () => {
   return (
       <Stack.Navigator>
         <Stack.Screen
-          name="Building08Main"
-          component={Building08Main}
+          name="Building26Main"
+          component={Building26Main}
           options={{headerShown: false}}
         />
       
@@ -42,7 +42,7 @@ const Building08 = () => {
   );
 };
 
-const Building08Main = ({navigation}) => {
+const Building26Main = ({navigation}) => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -52,16 +52,16 @@ const Building08Main = ({navigation}) => {
             contentContainerStyle={styles.innerContainer}>
             <FloorButton 
               floor="1F"
-              details="학생회관-1"
+              details="정성균선교관-1"
               navigation={navigation} 
             />
             <FloorButton 
               floor="2F"
-              details="학생회관-2"
+              details="정성균선교관-2"
               navigation={navigation} 
             />
           </ScrollView>
-          <Bottombar08 />
+          <Bottombar26 />
         </GestureHandlerRootView>
 
       </SafeAreaView>
@@ -176,4 +176,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Building08;
+export default Building26;

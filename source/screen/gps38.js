@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 
@@ -60,14 +60,14 @@ const html = `
         <button class="btn" onclick="zoomOut()">-</button>
     </div>
     <div class="university-button">
-        <button id="goToUniversity" class="btn" onclick="goToUniversity()">04문과대학 바로가기</button>
+        <button id="goToUniversity" class="btn" onclick="goToUniversity()">38실내체육관 바로가기</button>
     </div>
     <script type="text/javascript">
         (function () {
             var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = { 
-                    center: new kakao.maps.LatLng(36.354575, 127.421362), // 지도의 중심좌표
-                    level: 4 // 지도의 확대 레벨  
+                   center: new kakao.maps.LatLng(36.354575, 127.421362), // 지도의 중심좌표
+                    level: 4 // 지도의 확대 레벨 
                 }; 
 
             var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -149,7 +149,7 @@ const html = `
 
             // "공과대학 바로가기" 버튼을 클릭하면 공과대학으로 이동하는 함수입니다
             window.goToUniversity = function() {
-                window.location.href = 'http://map.kakao.com/link/map/문과대학,36.3551065,127.4232378';
+                window.location.href = 'http://map.kakao.com/link/map/실내체육관,36.353156,127.424832';
             }
         })();
     </script>

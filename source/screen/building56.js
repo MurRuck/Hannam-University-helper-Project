@@ -32,16 +32,7 @@ const Building56 = () => {
           component={Building56Main}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="1FScreen"
-          component={FirstFloorScreen}
-          options={{title: '1층'}}
-        />
-        <Stack.Screen
-          name="2FScreen"
-          component={SecondFloorScreen}
-          options={{title: '2층'}}
-        />
+     
         <Stack.Screen
           name="Gil"
           component={GilScreen}
@@ -56,20 +47,7 @@ const Building56Main = ({navigation}) => {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <GestureHandlerRootView>
-          <ScrollView
-            style={styles.outerContainer}
-            contentContainerStyle={styles.innerContainer}>
-            <FloorButton 
-              floor="1F"
-              details="56-1"
-              navigation={navigation} 
-            />
-            <FloorButton 
-              floor="2F"
-              details="56-2"
-              navigation={navigation} 
-            />
-          </ScrollView>
+        
           <Bottombar56 />
         </GestureHandlerRootView>
 

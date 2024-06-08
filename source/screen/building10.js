@@ -32,16 +32,7 @@ const Building10 = () => {
           component={Building10Main}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="1FScreen"
-          component={FirstFloorScreen}
-          options={{title: '1층'}}
-        />
-        <Stack.Screen
-          name="2FScreen"
-          component={SecondFloorScreen}
-          options={{title: '2층'}}
-        />
+      
         <Stack.Screen
           name="Gil"
           component={GilScreen}
