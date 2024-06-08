@@ -151,7 +151,7 @@ const ClassInfoBottomBar = ({ selectedRoom, startRoom, setStartPointer, setArriv
                     multiline
                   />
                   <TouchableOpacity style={styles.addButton} onPress={handleAddPost}>
-                    <Text style={styles.buttonText}></Text>
+                    <Text style={styles.buttonText}>Add Post</Text>
                   </TouchableOpacity>
                 </View>
                 <FlatList

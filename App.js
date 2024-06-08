@@ -32,6 +32,7 @@ import Building07 from './source/screen/building07';
 import Building15 from './source/screen/building15';
 import Building38 from './source/screen/building38';
 import Building01 from './source/screen/building01';
+import Gil from './source/screen/gil'
 
 import TestScreen from './source/screen/test'; // Test screen
 
@@ -58,6 +59,8 @@ const App = () => {
               headerStyle: {width: windowWidth, backgroundColor: '#ffffff'},
               headerTitleAlign: 'center',
             }}>
+
+
             <Stack.Screen
               name="Homepage"
               component={Home}
@@ -78,6 +81,13 @@ const App = () => {
                 ),
               }}
             />
+            <Stack.Screen
+                          name="Gil"
+                          component={Gil}
+                          options={{
+                            headerTitle: () => <HeaderTitle text="길 찾기" />,
+                          }}
+                        />
             <Stack.Screen
               name="ScheduleSearch"
               component={ScheduleSearch}

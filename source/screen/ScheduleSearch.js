@@ -1,10 +1,13 @@
+// ScheduleSearch.js
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, FlatList, SafeAreaView, Switch, TouchableOpacity, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import subjectsData from '../../source/component/schedule.json'; // 스케줄 데이터 가져오기
 import TimeTableActions from './TimeTableActions'; // TimeTableActions import
 import InputModal from './Timetable/InputModal'; // InputModal import
 
 const ScheduleSearch = () => {
+  const navigation = useNavigation(); // Get the navigation object
   const [query, setQuery] = useState(''); // 검색어 상태
   const [selectedCheckbox, setSelectedCheckbox] = useState(null); // 선택된 체크박스 상태
   const [filteredSubjects, setFilteredSubjects] = useState([]); // 필터된 과목 상태
@@ -64,14 +67,14 @@ const ScheduleSearch = () => {
 
   // 팝업을 표시하는 함수
   const showConfirmationPopup = (subject, type) => {
-    const message = type === 'add' 
+    const message = type === 'add'
       ? `${subject.subject}을(를) 추가하시겠습니까?`
       : type === 'delete'
       ? `${subject.subject}을(를) 삭제하시겠습니까?`
       : type === 'start'
       ? "출발지로 선택할까요?"
       : "도착지로 선택할까요?";
-    
+
     Alert.alert(
       "확인",
       message,
@@ -102,15 +105,7 @@ const ScheduleSearch = () => {
         ]
       );
     } else if (type === 'end') {
-      // 도착지로 선택하는 로직을 구현하세요.
-      console.log(`${subject.subject} 도착지로 선택됨`);
-      Alert.alert(
-        "도착지",
-        subject.location,
-        [
-          { text: "확인", style: "cancel" },
-        ]
-      );
+      navigation.navigate('Gil', { roomId: subject.location.slice(0,6), startFloor: subject.location.slice(0, 2) + '_1F', goalFloor: subject.location.slice(0, 2) + '_' + subject.location.slice(3, 4) + 'F' });
     }
   };
 

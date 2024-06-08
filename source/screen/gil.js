@@ -43,10 +43,10 @@ const Gil = () => {
         }
            const goal = combinedFloors[goalFloor]?.rooms[goalRoom];
 
-      if (!start || !goal) {
-        Alert.alert('Error', 'Invalid start or goal room.');
-        return;
-      }
+     //if (!start || !goal) {
+     //  Alert.alert('Error', 'Invalid start or goal room.');
+     //  return;
+     //}
     };
 
     calculatePath();
