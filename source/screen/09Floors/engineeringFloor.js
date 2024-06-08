@@ -58,6 +58,7 @@ const engineeringFloor = {
       '090124': { x: 45, y: 10, target: ['091FS1','091FS2','091FS3'] ,tmp:[1] },
       '090125': { x: 41, y: 10, target: ['091FS1','091FS2','091FS3'] ,tmp:[0] },
 
+
       '091FS1': { x: 17, y: 33, target: [] },
       '091FS2': { x: 37, y: 33, target: [] },
       '091FS3': { x: 81, y: 15, target: [] },
@@ -67,12 +68,12 @@ const engineeringFloor = {
       //'09Entrance2': { x: 81, y: 42 , target : []},
     },
     hallway: [
-      { x: 17, y: 41, connections: [1], rooms: ['090101', '091FS1'] },
-      { x: 22, y: 41, connections: [0, 2], rooms: ['090102'] },
-      { x: 27, y: 41, connections: [1, 3], rooms: ['090103', '090106'] },
-      { x: 32, y: 41, connections: [2, 4], rooms: ['090104', '091FS2'] },
-      { x: 44, y: 41, connections: [3, 5, 18], rooms: [] },
-      { x: 47, y: 41, connections: [4, 7], rooms: [] },
+      { x: 17, y: 42, connections: [1], rooms: ['090101', '091FS1'] },
+      { x: 22, y: 42, connections: [0, 2], rooms: ['090102'] },
+      { x: 27, y: 42, connections: [1, 3], rooms: ['090103', '090106'] },
+      { x: 32, y: 42, connections: [2, 4], rooms: ['090104',] },
+      { x: 44, y: 42, connections: [3, 5, 18], rooms: ['091FS2'] },
+      { x: 47, y: 42, connections: [4, 7], rooms: [] },
       { x: 47, y: 35, connections: [5, 7], rooms: ['090111', '090105'] },
       { x: 47, y: 23, connections: [6, 8, 9], rooms: ['090124'] },
       { x: 42.5, y: 23, connections: [7], rooms: ['090125'] },
@@ -123,12 +124,12 @@ const engineeringFloor = {
       { x: 9, y: 64, connections: [1], rooms: ['090202-A'] },
       { x: 15, y: 64, connections: [0, 2], rooms: ['090201','090202'] },
       { x: 21, y: 64, connections: [1, 3, 4], rooms: ['090201-A'] },
-      { x: 31, y: 64, connections: [2], rooms: ['090201-A'] },
-      { x: 21, y: 43, connections: [2, 5, 6], rooms: [] },
-      { x: 17, y: 43, connections: [5], rooms: ['092FS1'] },
-      { x: 26, y: 43, connections: [5, 7], rooms: ['090203', '090206'] },
+      { x: 31, y: 64, connections: [2], rooms: ['090201-B'] },//3
+      { x: 21, y: 43, connections: [2, 5, 6], rooms: [] },//4
+      { x: 17, y: 43, connections: [6], rooms: ['092FS1'] },//5
+      { x: 26, y: 43, connections: [4, 7], rooms: ['090203', '090206'] },//6
       { x: 31, y: 43, connections: [6, 8], rooms: ['090204'] },
-      { x: 37.5, y: 43, connections: [7, 9], rooms: ['092FS2'] },
+      { x: 37, y: 43, connections: [7, 9], rooms: ['092FS2'] },
       { x: 41, y: 43, connections: [8, 10, 11], rooms: [] },
       { x: 51, y: 43, connections: [9], rooms: ['090205'] },
       { x: 41, y: 23, connections: [9, 12], rooms: [] },
