@@ -12,6 +12,7 @@ import InputModal from './Timetable/InputModal';
 import {timeTableState} from './store/store';
 import {useRecoilState} from 'recoil';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useNavigation} from '@react-navigation/native';
 
 const hourData = Array.from({length: 11}, (_, i) => i + 9);
 
@@ -20,6 +21,7 @@ const Schedulepage = () => {
   const [showModal, setShowModal] = useState(false);
   const [editInfo, setEditInfo] = useState({});
   const [loading, setLoading] = useState(true);
+  const navigation = useNavigation()
 
   useEffect(() => {
     // 데이터 로드가 완료되면 로딩 상태를 해제
@@ -73,10 +75,10 @@ const Schedulepage = () => {
         <Button
           mode="contained"
           icon="plus"
-          onPress={() => setShowModal(true)}
+          onPress={() => navigation.navigate('ScheduleSearch')}
           style={styles.addButton}>
           강의 추가
-        </Button>
+        </Button> 
         <DataTable>
           <DataTable.Header>
             <DataTable.Title style={styles.cell}>시간</DataTable.Title>
