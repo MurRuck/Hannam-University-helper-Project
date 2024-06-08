@@ -17,7 +17,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const ThirdFloorScreen = () => {
   const navigation = useNavigation();
-  const [currentImage] = useState(floors['093F'].image);
+  const [currentImage] = useState(floors['09_3F'].image);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [startRoom, setStartRoom] = useState(null);
 
