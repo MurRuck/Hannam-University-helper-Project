@@ -47,7 +47,45 @@ const Building56Main = ({navigation}) => {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <GestureHandlerRootView>
-        
+        <ScrollView
+            style={styles.outerContainer}
+            contentContainerStyle={styles.innerContainer}>
+            <FloorButton 
+              floor="1F"
+              details="56기념관-1"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="2F"
+              details="56기념관-2"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="3F"
+              details="56기념관-3"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="4F"
+              details="56기념관-4"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="5F"
+              details="56기념관-5"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="6F"
+              details="56기념관-6"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="7F"
+              details="56기념관-7"
+              navigation={navigation} 
+            />
+          </ScrollView>
           <Bottombar56 />
         </GestureHandlerRootView>
 
