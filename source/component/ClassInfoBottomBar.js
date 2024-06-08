@@ -11,6 +11,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
+import combinedFloors from '../screen/combinedFloors'; // Ensure you import the combined floors
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -101,6 +102,15 @@ const ClassInfoBottomBar = ({ selectedRoom, startRoom, setStartPointer, setArriv
     }
   }, [isBottomSheetOpen]);
 
+  const handleSetArrivalPointer = (roomId) => {
+    setArrivalPointer(roomId);
+  };
+
+  const handleSetArrivalToEntrance = (roomId) => {
+    const buildingCode = roomId.slice(0, 2);
+    setArrivalPointer(`${buildingCode}Entrance`);
+  };
+
   return (
     <View style={styles.bottomContainer}>
       {isBottomSheetOpen && (
@@ -126,14 +136,17 @@ const ClassInfoBottomBar = ({ selectedRoom, startRoom, setStartPointer, setArriv
                 <View style={styles.buttonContainer}>
                   <TouchableOpacity
                     style={styles.actionButton}
-                    onPress={() => setStartPointer(selectedRoom)}
+                    onPress={() => {
+                      setStartPointer(selectedRoom);
+                      handleSetArrivalToEntrance(selectedRoom);  // Set arrival to entrance
+                    }}
                   >
                     <Text style={styles.buttonText}>Set as Departure</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
                     style={styles.actionButton}
-                    onPress={() => setArrivalPointer(selectedRoom)}
+                    onPress={() => handleSetArrivalPointer(selectedRoom)}
                   >
                     <Text style={styles.buttonText}>Set as Arrival</Text>
                   </TouchableOpacity>

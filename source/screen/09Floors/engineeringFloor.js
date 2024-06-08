@@ -39,6 +39,8 @@ const engineeringFloor = {
   '09_1F': {
     image: require('../../image/공대1층.png'),
     rooms: {
+      '09Entrance': { x: 44, y: 60 , target : ['091FS1','091FS2','091FS3'] ,tmp:[0] },
+
       '090101': { x: 15, y: 70, target: ['091FS1','091FS2','091FS3'] ,tmp:[0] },
       '090102': { x: 15, y: 53, target: ['091FS1','091FS2','091FS3'] ,tmp:[0] },
       '090103': { x: 25, y: 53, target: ['091FS1','091FS2','091FS3'] ,tmp:[0] },
@@ -60,8 +62,7 @@ const engineeringFloor = {
       '091FS2': { x: 37, y: 33, target: [] },
       '091FS3': { x: 81, y: 15, target: [] },
 
-      
-      '09Entrance': { x: 44, y: 60 , target : ['091FS1','091FS2','091FS3'] ,tmp:[0] },
+
       //
       //'09Entrance2': { x: 81, y: 42 , target : []},
     },

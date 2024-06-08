@@ -29,8 +29,17 @@ const Gil = () => {
 
   useEffect(() => {
     const calculatePath = () => {
-      const start = combinedFloors[startFloor]?.rooms[startRoom];
-      const goal = combinedFloors[goalFloor]?.rooms[goalRoom];
+    const start = combinedFloors[startFloor]?.rooms[startRoom]; // Set to entrance of the building
+      //const buildingCode = startRoom.slice(0, 2); // Extract building code from startRoom
+       if (startRoom === goalRoom) {
+          const buildingCode = startRoom.slice(0, 2);
+          setStartRoom(`${buildingCode}Entrance`);
+        }
+        else
+        {
+            const start = combinedFloors[startFloor]?.rooms[startRoom]; // Set to entrance of the building
+        }
+           const goal = combinedFloors[goalFloor]?.rooms[goalRoom];
 
       if (!start || !goal) {
         Alert.alert('Error', 'Invalid start or goal room.');
@@ -38,7 +47,7 @@ const Gil = () => {
       }
     };
 
-    //calculatePath();
+    calculatePath();
   }, [startRoom, goalRoom, startFloor, goalFloor]);
 
   useEffect(() => {
@@ -474,6 +483,7 @@ const Gil = () => {
                   </React.Fragment>
                 );
               })}
+
               {drawGreenLineToNearestHallway(combinedFloors[startFloor]?.rooms[startRoom], hallwaysOnFloor)}
               {drawGreenLineToNearestHallway(combinedFloors[goalFloor]?.rooms[goalRoom], hallwaysOnFloor)}
               {drawBlueLinesThroughHallways2(
