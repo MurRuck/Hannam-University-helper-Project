@@ -105,6 +105,9 @@ const Gil = () => {
                       hallwaysOnFloor,
                       startFloor
                   )}
+                  <View style={styles.floorIndicator}>
+                                            <Text style={styles.floorText}>Floor: {startFloor}</Text>
+                                          </View>
               </>
           );
       } else if (newToggleState === 1) {
@@ -142,6 +145,11 @@ const Gil = () => {
                   )}
                   {drawGreenLineToNearestHallway(combinedFloors[goalFloor]?.rooms[goalRoom], combinedFloors[goalFloor]?.hallway)}
                   {drawGreenLineToNearestHallway(combinedFloors[goalFloor]?.rooms[combinedFloors[goalFloor]?.rooms[goalRoom]?.target[goalTmp]], combinedFloors[goalFloor]?.hallway)}
+
+              <View style={styles.floorIndicator}>
+                          <Text style={styles.floorText}>Floor: {goalFloor}</Text>
+                        </View>
+
               </>
           );
       }
@@ -451,6 +459,10 @@ const Gil = () => {
                   height: 20
                 }}
               />
+
+<View style={styles.floorIndicator}>
+        <Text style={styles.floorText}>Floor: {startFloor}</Text>
+      </View>
               {filterConnectedHallways(hallwaysOnFloor, path).map((hallway, index) => {
                 const scaledPoint = scaleCoordinates(hallway, { width: windowWidth, height: windowHeight });
                 return (
@@ -492,7 +504,6 @@ const Gil = () => {
             </View>
           )
 }
-
     </View>
   );
 };
@@ -510,6 +521,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 16,
+    zIndex: 20, // Ensure the button is on top
   },
   roomInput: {
     flex: 1,
@@ -521,10 +533,12 @@ const styles = StyleSheet.create({
   },
   swapButton: {
     padding: 8,
+    zIndex: 20, // Ensure the button is on top
   },
   swapButtonText: {
     fontSize: 24,
     color: '#007bff',
+    zIndex: 20, // Ensure the button is on top
   },
   floorContainer: {
     flex: 1,
@@ -533,8 +547,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   map: {
-    width: '100%',
-    height: '100%',
+    width: '110%',
+    height: '130%',
     resizeMode: 'contain', // 이미지가 뷰를 벗어나지 않도록 설정
   },
   dualFloorsContainer: {
@@ -542,9 +556,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
+  floorIndicator: {
+      position: 'absolute',
+      top: 0,
+      right: 20,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      padding: 8,
+      borderRadius: 4,
+    },
   buttonContainer: {
     position: 'absolute',
     right: 10,
     bottom: 10,
+    zIndex: 20, // Ensure the button is on top
   },
 });
