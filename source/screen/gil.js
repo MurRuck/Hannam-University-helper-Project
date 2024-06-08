@@ -34,6 +34,8 @@ const Gil = () => {
        if (startRoom === goalRoom) {
           const buildingCode = startRoom.slice(0, 2);
           setStartRoom(`${buildingCode}Entrance`);
+
+          setStartFloor(buildingCode + '_1F');
         }
         else
         {

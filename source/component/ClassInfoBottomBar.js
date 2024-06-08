@@ -134,33 +134,24 @@ const ClassInfoBottomBar = ({ selectedRoom, startRoom, setStartPointer, setArriv
                 <Text style={styles.roomText}>Arrival: {selectedRoom}</Text>
                 <Text style={styles.roomText}>{selectedRoom} 강의실입니다.</Text>
                 <View style={styles.buttonContainer}>
-                  <TouchableOpacity
-                    style={styles.actionButton}
-                    onPress={() => {
-                      setStartPointer(selectedRoom);
-                      handleSetArrivalToEntrance(selectedRoom);  // Set arrival to entrance
-                    }}
-                  >
-                    <Text style={styles.buttonText}>Set as Departure</Text>
-                  </TouchableOpacity>
-
+                  {/* "Set as Departure" button has been removed */}
                   <TouchableOpacity
                     style={styles.actionButton}
                     onPress={() => handleSetArrivalPointer(selectedRoom)}
                   >
-                    <Text style={styles.buttonText}>Set as Arrival</Text>
+                    <Text style={styles.buttonText}>길안내 시작</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={styles.inputContainer}>
                   <TextInput
                     style={styles.input}
-                    placeholder="Enter your message"
+                    placeholder="건의사항 입력"
                     value={contents}
                     onChangeText={setContents}
                     multiline
                   />
                   <TouchableOpacity style={styles.addButton} onPress={handleAddPost}>
-                    <Text style={styles.buttonText}>Add Post</Text>
+                    <Text style={styles.buttonText}></Text>
                   </TouchableOpacity>
                 </View>
                 <FlatList
