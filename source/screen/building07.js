@@ -60,6 +60,16 @@ const Building07Main = ({navigation}) => {
               details="조형예술대학-2"
               navigation={navigation} 
             />
+            <FloorButton 
+              floor="3F"
+              details="조형예술대학-3"
+              navigation={navigation} 
+            />
+            <FloorButton 
+              floor="4F"
+              details="조형예술대학-4"
+              navigation={navigation} 
+            />
           </ScrollView>
           <Bottombar07 />
         </GestureHandlerRootView>

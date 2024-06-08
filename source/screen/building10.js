@@ -60,6 +60,16 @@ const Building10Main = ({navigation}) => {
               details="중앙 도서관-2"
               navigation={navigation} 
             />
+              <FloorButton 
+              floor="3F"
+              details="중앙 도서관-3"
+              navigation={navigation} 
+            />
+              <FloorButton 
+              floor="4F"
+              details="중앙 도서관-4"
+              navigation={navigation} 
+            />
           </ScrollView>
           <Bottombar10 />
         </GestureHandlerRootView>

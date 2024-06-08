@@ -60,6 +60,22 @@ const Building50Main = ({navigation}) => {
               details="린튼 글로벌-2"
               navigation={navigation} 
             />
+              <FloorButton 
+              floor="3F"
+              details="린튼 글로벌-3"
+              navigation={navigation} 
+            />
+              <FloorButton 
+              floor="4F"
+              details="린튼 글로벌-4"
+              navigation={navigation} 
+            />
+              <FloorButton 
+              floor="5F"
+              details="린튼 글로벌-5"
+              navigation={navigation} 
+            />
+
           </ScrollView>
           <Bottombar50 />
         </GestureHandlerRootView>
