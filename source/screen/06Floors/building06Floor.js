@@ -36,7 +36,7 @@ const building06Floor = {
 
         
         '06Entrance': { x: 32, y:40 , target:  ['061FS1', '061FS2'],tmp:[0]},
-        '06Entrance2': { x: 80, y:76 , target:  ['061FS1', '061FS2'],tmp:[1]},
+
 
    
 

@@ -19,7 +19,7 @@ const building11Floor = {
         '111FS1': { x: 38, y:35, target: [] },
         '111FS2': { x: 74, y:35, target: [] },
 
-        '02Entrance': { x: 35, y:69, target: [] },
+        '11Entrance': { x: 35, y:69, target: [] },
       },
       hallway: [
            { x: 8, y: 35, connections: [1], rooms: ['110101','110119'], },
