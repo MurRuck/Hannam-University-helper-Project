@@ -1,79 +1,46 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+이 프로젝트는 [**React Native**][`@react-native-community/cli`](https://github.com/react-native-community/cli)를 사용한 새로운 React Native 프로젝트입니다.
 
-# Getting Started
+# 시작
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Step 1: Metro 서버 시작
 
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
 # using npm
 npm start
 
 # OR using Yarn
 yarn start
-```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Step 2: 어플리케이션 시작
 
 ### For Android
 
-```bash
 # using npm
 npm run android
 
 # OR using Yarn
 yarn android
-```
 
 ### For iOS
 
-```bash
 # using npm
 npm run ios
 
 # OR using Yarn
 yarn ios
-```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+# 프로젝트 개요
 
-## Step 3: Modifying your App
+Hannam University Helper Project는 한남대학교 학생들이 학교 생활을 더욱 편리하게 관리할 수 있도록 돕는 어플리케이션입니다. 수업 시간표 관리, 과제 마감일 알림, 학교 공지사항 열람 등의 기능을 제공합니다.
 
-Now that you have successfully run the app, let's modify it.
+## 주요 기능
+# 시간표 관리: 학기별 수업 시간표를 등록하고 관리할 수 있습니다.
+# 과제 마감일 알림: 과제의 마감일을 등록하면, 마감일 전에 알림을 받을 수 있습니다.
+# 공지사항 확인: 학교 공지사항을 한눈에 볼 수 있습니다.
+# 학생 지원 서비스 정보: 장학금, 학사 안내 등 각종 학생 지원 서비스를 확인할 수 있습니다.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 사용법
+# 회원가입 후 로그인.
+# 메인 화면에서 시간표 및 과제 관리 기능 사용.
+# 공지사항 메뉴에서 학교 공지사항 확인.
+# 설정 메뉴에서 알림 설정 및 개인 정보 수정 가능.
